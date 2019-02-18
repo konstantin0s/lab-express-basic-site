@@ -23,7 +23,7 @@ app.get('/photo', (req, res, next) => {
   res.render('photo');
 }
 
-// hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(__dirname + '/views/partials');
 
 app.listen(3000, ()=> {
   console.log("listening")

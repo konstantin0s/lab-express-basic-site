@@ -11,19 +11,18 @@ app.get('/', (req, res, next) => {
   res.render('index');
 });
 
-app.get('/home', (req, res, next) => {
-  res.render('home');
+app.get('/players', (req, res, next) => {
+  res.render('players');
 });
 
-app.get('/about', (req, res, next) => {
-  res.render('about');
+app.get('/teams', (req, res, next) => {
+  let data = {
+    layout: true
+  }
+  res.render('teams');
 });
 
-app.get('/photo', (req, res, next) => {
-  res.render('photo');
-}
-
-// hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(__dirname + '/views/partials');
 
 app.listen(3000, ()=> {
   console.log("listening")
